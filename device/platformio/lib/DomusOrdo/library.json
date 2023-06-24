@@ -1,0 +1,9 @@
+{
+   "name": "DomusOrdo",
+   "version": "0.0.0",
+   "build": {
+      "includeDir": "./src/include",
+      "flags": [
+      ]
+   }
+}
