@@ -18,10 +18,12 @@ namespace domo::connection {
    struct ConnectionContext {
       RepeatTimer led_timer{100};
       RepeatTimer led_timer_aux{100, true};
+      Configuration cfg;
    };
 
-   void update(const Configuration& cfg);
-   void signal(const Configuration& cfg, const Signals s);
+   void update();
+   void signal(ConnectionContext& ctx, const Signals s);
+   void init(const Configuration& cfg);
 
    using ConnectionState = states::State<ConnectionContext>;
    // States
