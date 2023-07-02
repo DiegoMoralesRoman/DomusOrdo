@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+$border-color: #7a7a7a;
+$border-selected: #000000;
+
+.root {
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: 1rem;
+  background: $light-background;
+  &:hover {
+    border-color: $border-selected;
+  }
+}
+
+.icon {
+  width: 10rem;
+  height: 10rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: $light-foreground;
+  text-align: center;
+}

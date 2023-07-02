@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+.root {
+}
+
+.header-icon {
+  height: 3rem;
+  width: 3rem;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 8rem;
+  justify-content: space-around;
+  background-color: $dark-background;
+  background-image: none;
+}
+
+h1,
+h2 {
+  color: $dark-foreground;
+}
+
+.header-title {
+    h1 {
+        
+    }
+
+    h2 {
+
+    }
+}
+
+// DEBUG: Hace que el placeholder se vea blanco (se debe quitar luego).
+img {
+    filter: invert(1);
+}
