@@ -1,9 +1,22 @@
 {
+   "authors": {
+      "name": "Diego Morales Román",
+      "email": "moralesromandiego@gmail.com",
+      "url": "http://servertiel.ddns.net"
+   },
    "name": "DomusOrdo",
    "version": "0.0.0",
    "build": {
-      "includeDir": "./src/include",
-      "flags": [
-      ]
-   }
+      "includeDir": "./src/include"
+   },
+   "dependencies": [
+       {
+           "owner": "bblanchon",
+           "name": "ArduinoJson",
+           "version": "^6.16.1"
+       },
+       {"name": "ESP8266WiFi"}
+   ],
+   "frameworks": ["arduino"],
+   "platforms": ["espressif8266"]
 }

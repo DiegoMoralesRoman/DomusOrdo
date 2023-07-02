@@ -1,9 +1,16 @@
 #include <domusordo.hpp>
 
 #include <utils/timer.hpp>
+#include "connection/connection.hpp"
 #include "core_esp8266_features.h"
 
-void domo::update() {
+void domo::update(const Configuration& cfg) {
    // Update timers
-   domo::RepeatTimer::update_timers(micros());
+   auto t = micros();
+   domo::RepeatTimer::update_timers(t);
+   domo::RepeatTimer::update_timers(t);
+
+   // Update state machine
+   domo::connection::update(cfg);
 }
+

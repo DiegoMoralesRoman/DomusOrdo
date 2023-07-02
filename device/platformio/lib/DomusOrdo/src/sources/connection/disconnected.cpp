@@ -1,8 +1,13 @@
-#include <connection/connection.hpp>
+#include <include/connection/connection.hpp>
 
 using namespace domo;
 
 connection::ConnectionState connection::disconnected(states::Signal signal, ConnectionContext& ctx) {
+   switch(signal) {
+      case INITIALIZATION: {
+
+      }
+   }
    return {disconnected};
 }
 

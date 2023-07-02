@@ -15,12 +15,7 @@ export const DevicesList = ({ className }: DevicesListProps) => {
         <div className={classNames(styles.root, className)}>
             <h1 className={styles.title}>Connected devices</h1>
             <div className={styles.grid}>
-                <DevicePreview />
-                <DevicePreview />
-                <DevicePreview />
-                <DevicePreview />
-                <DevicePreview />
-                <DevicePreview />
+                {}
             </div>
         </div>
     );
