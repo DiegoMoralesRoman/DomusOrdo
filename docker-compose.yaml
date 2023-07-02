@@ -6,29 +6,37 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: domusordo
+      PGDATA: /var/lib/postgresql/data/pgdata
     networks:
-      - mynetwork
+      - domusnet
     hostname: database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   api:
     build: ./web/API
     restart: always
     networks:
-      - mynetwork
+      - domusnet
     depends_on:
       - database
     hostname: api
 
-  webapp:
-    image: mywebapp:latest
+  interface:
+    build: ./web/interface
     restart: always
     ports:
       - 80:80
     networks:
-      - mynetwork
+      - domusnet
     depends_on:
       - api
-    hostname: webapp
+    hostname: interface
 
 networks:
-  mynetwork:
+  domusnet:
+
+volumes:
+  pgdata:
