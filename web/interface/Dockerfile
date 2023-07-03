@@ -1,8 +1,5 @@
 FROM alpine
 
-# Copy application
-COPY . /src
-
 # Install dependencies
 RUN apk update
 RUN apk add \
@@ -10,6 +7,9 @@ RUN apk add \
    npm      
 
 RUN npm install -g serve
+
+# Copy application
+COPY . /src
 
 # Build application
 WORKDIR /src
